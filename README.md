@@ -13,7 +13,7 @@ WIP Trading Card Game project
 ## Steps
 
 ### Step 0
-####Code Related
+#### Code Related
 - [ ] Decide Tech Stack
 - [ ] Find other programmers to join
 
