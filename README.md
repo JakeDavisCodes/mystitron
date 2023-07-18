@@ -1,10 +1,7 @@
-# mystitron
-WIP Trading Card Game project
-
 ## Tech Stack
 * React
   * 3JS
-* CSS LIBRARY
+* CSS LIBRARY - SCSS / TailWind / MatUI
 * MariaDB
 * Express
 * Node
@@ -22,5 +19,30 @@ WIP Trading Card Game project
 - [ ] Commission an artist for some card/game art
 
 ### Step 1
+#### Code Related
+- [ ] Schema
+  - [ ] Users
+  - [ ] Sets
+  - [ ] Cards
+- [ ] Build DB
+- [ ] Build Routes
+  - [ ] Generate / Get 'Pack'
+  - [ ] Trade
+  - [ ] Login
+  - [ ] SignUp
+  - [ ] GetCards
+- [ ] Optimize Routes
+  - [ ] Generate / Get 'Pack'
+  - [ ] Trade
+  - [ ] Login
+  - [ ] SignUp
+  - [ ] GetCards
+- [ ] Create Data
+  - [ ] Users
+  - [ ] Cards
+  - [ ] Sets
 
+#### Non-Code
+- [ ] 
 
+### Step 2
