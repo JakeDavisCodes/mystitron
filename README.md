@@ -20,10 +20,12 @@
 
 ### Step 1
 #### Code Related
-- [ ] Schema
-  - [ ] Users
-  - [ ] Sets
-  - [ ] Cards
+- [x] Schema
+  - [x] Users
+  - [x] Sets
+  - [x] Cards
+  - [x] Messages
+  - [x] Trades
 - [ ] Build DB
 - [ ] Build Routes
   - [ ] Generate / Get 'Pack'
