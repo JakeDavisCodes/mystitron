@@ -29,3 +29,28 @@ CREATE TABLE IF NOT EXISTS cards(
   foreign key(owner_id) references users(id)
   foreign key(collection_id) references collections(id)
 )
+
+CREATE TABLE IF NOT EXISTS trades(
+  id: int auto_increment not null,
+  to_user_id: int not null,
+  from_user_id: int not null,
+  to_user_offer: varchar(1000) not null,
+  from_user_offer: varchar(1000)
+  created_at: timestamp default current_timestamp,
+
+  primary key(id),
+  foreign key(to_user_id) references users(id),
+  foreign key(from_user_id) references users(id)
+)
+
+CREATE TABLE IF NOT EXISTS messages(
+  id: int auto_increment not null,
+  to_user_id: int not null,
+  from_user_id: int not null,
+  content: varchar(1000) not null,
+  created_at: timestamp default current_timestamp,
+
+  primary key(id),
+  foreign key(to_user_id) references users(id),
+  foreign key(from_user_id) references users(id)
+)
