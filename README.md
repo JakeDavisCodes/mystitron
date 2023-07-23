@@ -26,6 +26,7 @@
   - [x] Cards
   - [x] Messages
   - [x] Trades
+- [x] Sql File
 - [ ] Build DB
 - [ ] Build Routes
   - [ ] Generate / Get 'Pack'
@@ -45,6 +46,6 @@
   - [ ] Sets
 
 #### Non-Code
-- [ ] 
+- [ ]
 
 ### Step 2
