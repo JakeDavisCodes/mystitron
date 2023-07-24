@@ -13,6 +13,8 @@
 #### Code Related
 - [ ] Decide Tech Stack
 - [ ] Find other programmers to join
+  - [x] Jacob
+  - [ ] Sandy
 
 #### Non-Code
 - [ ] Solidify Game design idea
