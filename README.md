@@ -13,6 +13,8 @@
 #### Code Related
 - [ ] Decide Tech Stack
 - [ ] Find other programmers to join
+  - [x] Jacob
+  - [ ] Sandy
 
 #### Non-Code
 - [ ] Solidify Game design idea
@@ -26,6 +28,7 @@
   - [x] Cards
   - [x] Messages
   - [x] Trades
+- [x] Sql File
 - [ ] Build DB
 - [ ] Build Routes
   - [ ] Generate / Get 'Pack'
@@ -45,6 +48,6 @@
   - [ ] Sets
 
 #### Non-Code
-- [ ] 
+- [ ]
 
 ### Step 2
