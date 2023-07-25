@@ -14,7 +14,7 @@
 - [ ] Decide Tech Stack
 - [ ] Find other programmers to join
   - [x] Jacob
-  - [ ] Sandy
+  - [ ] Dev 2
 
 #### Non-Code
 - [ ] Solidify Game design idea
