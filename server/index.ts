@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
+const appRouter = require('./router')
 
 const app = express();
 
@@ -10,9 +11,8 @@ const app = express();
 app.use(morgan('dev'));
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.sendStatus(200)
-});
+// ROUTER
+app.use(appRouter)
 
 app.listen(process.env.PORT);
 console.log(`LISTENING AT PORT: ${process.env.PORT}`);
