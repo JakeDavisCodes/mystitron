@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const controller = require('./controller');
+const controller = require('./controller.ts');
 
 // Temp Test Route
 router.get('/access', (req, res) => {

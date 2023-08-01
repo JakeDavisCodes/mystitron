@@ -29,7 +29,7 @@
   - [x] Messages
   - [x] Trades
 - [x] Sql File
-- [ ] Build DB
+- [ ] Build DB - current
 - [ ] Build Routes
   - [ ] Generate / Get 'Pack'
   - [ ] Trade

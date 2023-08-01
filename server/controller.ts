@@ -1,5 +1,7 @@
-const db = require('./db')
+const db = require('./db.ts')
 
-const functions = {}
+const controllerFuncs = {
+  ex: () => 'ex'
+}
 
-export default functions;
+module.exports =  controllerFuncs;

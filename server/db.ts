@@ -6,6 +6,6 @@ const pool = mariadb.createPool({
      connectionLimit: 1
 });
 
-const functions = {};
+const dbFuncs = {};
 
-export default functions;
+module.exports =  dbFuncs;

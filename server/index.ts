@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-const appRouter = require('./router')
+const appRouter = require('./router.ts')
 
 const app = express();
 
