@@ -1,6 +1,7 @@
 ## Tech Stack
 * React
   * 3JS
+* Next.js
 * CSS LIBRARY - SCSS / TailWind / MatUI
 * MariaDB
 * Express
@@ -29,7 +30,7 @@
   - [x] Messages
   - [x] Trades
 - [x] Sql File
-- [ ] Build DB
+- [ ] Build DB - current
 - [ ] Build Routes
   - [ ] Generate / Get 'Pack'
   - [ ] Trade
