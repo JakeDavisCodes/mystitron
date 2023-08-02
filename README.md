@@ -1,6 +1,7 @@
 ## Tech Stack
 * React
   * 3JS
+* Next.js
 * CSS LIBRARY - SCSS / TailWind / MatUI
 * MariaDB
 * Express
