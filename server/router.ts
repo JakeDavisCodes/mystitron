@@ -8,5 +8,6 @@ router.get('/access', (req, res) => {
   };
   res.status(200).json(json);
 });
+router.get('/test', controller.test)
 
 module.exports = router;

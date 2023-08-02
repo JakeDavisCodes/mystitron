@@ -6,6 +6,18 @@ const pool = mariadb.createPool({
      connectionLimit: 1
 });
 
-const dbFuncs = {};
+var conn;
+
+pool.getConnection()
+     .then((connection) => {
+          conn = connection
+          console.log('connection made')
+          connection.query('USE mystitron')
+     })
+
+const dbFuncs = {
+     test: () => conn.query('SELECT * FROM USERS')
+          .then((rows) => rows[0])
+};
 
 module.exports =  dbFuncs;
