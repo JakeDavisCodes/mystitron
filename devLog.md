@@ -10,3 +10,10 @@ Turns out the plugin issue might not have been significant, solved the later iss
 I finally managed to fix the issue by running ```sudo mariadb-upgrade --force``` to force MySQL/MariaDB to recreate some lost tables.
 
 Managed to finally connect the local server to the local db!
+
+Managed to finally connect local server to local db!
+
+### Day 2
+Today I'd like to focus on getting some data into the db to start running tests and building the server routes. I'm going to use chat partly for this and I will have to make some myself.
+
+I wound up not being able to use Chat as much as I'd wanted to. I had to use a mixture of chat and JS to build some user data.

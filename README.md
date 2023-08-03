@@ -30,7 +30,7 @@
   - [x] Messages
   - [x] Trades
 - [x] Sql File
-- [ ] Build DB - current
+- [x] Build DB
 - [ ] Build Routes
   - [ ] Generate / Get 'Pack'
   - [ ] Trade
@@ -44,7 +44,7 @@
   - [ ] SignUp
   - [ ] GetCards
 - [ ] Create Data
-  - [ ] Users
+  - [x] Users
   - [ ] Cards
   - [ ] Sets
 
