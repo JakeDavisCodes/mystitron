@@ -1,5 +1,5 @@
 const db = require('./db.js')
-const generateFakeUser = require('./fakeData/user.js').fakeUsers
+const generateFakeUsers = require('./fakeData/user.js').fakeUsers
 
 const controllerFuncs = {
   test: (req, res) => {
@@ -8,14 +8,17 @@ const controllerFuncs = {
       .catch((err) => res.sendStatus(500))
   },
   admin: {
-    generateUsers: () => {
+    generateUsers: (req, res) => {
       var userPormises = [];
+      const fakeUsers = generateFakeUsers(25)
 
-      for (let i = 0; i < 100; i++) {
-        const {username, email, pass_hash} = generateFakeUser()
+      for (let i = 0; i < fakeUsers.length; i++) {
+        const {username, email, pass_hash} = fakeUsers[i]
         userPormises.push(db.admin.createUser(username, email, pass_hash))
       }
       Promise.all(userPormises)
+        .then(() => res.sendStatus(200))
+        .catch(() => res.sendStatus(500))
     }
   }
 }

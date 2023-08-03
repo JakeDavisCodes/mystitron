@@ -2,7 +2,7 @@
   "scripts": {
     "client-dev": "npx webpack --watch",
     "build": "npx webpack",
-    "start": "node server/index.ts"
+    "start": "node server/index.js"
   },
   "dependencies": {
     "@types/node": "^20.4.4",

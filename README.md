@@ -44,7 +44,7 @@
   - [ ] SignUp
   - [ ] GetCards
 - [ ] Create Data
-  - [ ] Users
+  - [x] Users
   - [ ] Cards
   - [ ] Sets
 
