@@ -5,6 +5,16 @@ const controllerFuncs = {
     db.test()
       .then((result) => res.status(200).json(result))
       .catch((err) => res.sendStatus(500))
+  },
+  admin: {
+    generateUsers: () => {
+      var userPormises = [];
+
+      for (let i = 0; i < 100; i++) {
+        userPormises.push(db.admin.createUser())
+      }
+      Promise.all(userPormises)
+    }
   }
 }
 
