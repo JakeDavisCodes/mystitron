@@ -1,6 +1,6 @@
 const SHA256 = require('crypto-js/sha256');
 
-const adjectives:string[] = [
+var adjectives = [
   'legendary',
   'sacred',
   'ancient',
@@ -31,7 +31,7 @@ const adjectives:string[] = [
   'complex',
   'powerful',
 ];
-const nouns:string[] = [
+var nouns = [
   'Testament',
   'world',
   'joy',
@@ -83,7 +83,7 @@ const nouns:string[] = [
   'fire',
   'life',
 ]
-const domains : string[] = [
+var domains = [
   'flaswicitostestament.com',
   'uhnotpgnotforkids.com',
   'songofachilles.org',
@@ -102,7 +102,7 @@ const domains : string[] = [
   'thejoyfulgiggle.com',
   'thenineverses.org',
 ]
-const passwords:string[] = [
+var passwords = [
   'legendaryworld78@',
   'sacredjoyful42!',
   'ancientdawning17#',
@@ -136,17 +136,17 @@ const passwords:string[] = [
 ]
 
 const generateUser = () => {
-  const adjective:string = adjectives[Math.floor(Math.random() * adjectives.length)];
-  const noun:string = nouns[Math.floor(Math.random() * nouns.length)];
-  const username:string = adjective + noun;
+  const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+  const noun = nouns[Math.floor(Math.random() * nouns.length)];
+  const username = adjective + noun;
 
-  const domain:string = domains[Math.floor(Math.random() * domains.length)];
-  const email:string = username + '@' + domain;
+  const domain = domains[Math.floor(Math.random() * domains.length)];
+  const email = username + '@' + domain;
 
-  const password:string = passwords[Math.floor(Math.random() * passwords.length)];
-  const pass_hash:string = SHA256(password);
+  const password = passwords[Math.floor(Math.random() * passwords.length)];
+  const pass_hash = SHA256(password);
 
-  const user:object = {
+  const user = {
     username,
     email,
     pass_hash,
@@ -158,8 +158,8 @@ const generateUser = () => {
 }
 
 module.exports = {
-  fakeUsers: (num:number = 100) => {
-    const users:object[] = [];
+  fakeUsers: (num = 100) => {
+    const users = [];
 
     for (let i = 0; i < num; i++) {
       users.push(generateUser())

@@ -6,7 +6,6 @@ const path = require('path');
 const appRouter = require('./router.ts')
 
 const app = express();
-const port: number | string = process.env.PORT || 3000
 
 // MIDDLE WARE
 app.use(morgan('dev'));
