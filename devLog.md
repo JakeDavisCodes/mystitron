@@ -9,4 +9,4 @@ Turns out the plugin issue might not have been important, solved the later issue
 
 Finally managed to fix the issue by running ```sudo mariadb-upgrade --force``` to force mysql/mariadb to recreate some lost tables.
 
-Managed to finally connect local server to local db!ß
+Managed to finally connect local server to local db!
