@@ -20,3 +20,7 @@ I wound up not being able to use Chat as much as I'd wanted to. I had to use a m
 
 ### Day 3
 Today is going to be focused on Applications.
+
+### Day 4
+I had a great day at the Renaissance Fair today! Got an awesome digeridoo.
+No time for coding today, but I hope to start work on Card / Set data tomorrow
