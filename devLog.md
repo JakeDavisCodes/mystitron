@@ -24,3 +24,6 @@ Today is going to be focused on Applications.
 ### Day 4
 I had a great day at the Renaissance Fair today! Got an awesome digeridoo.
 No time for coding today, but I hope to start work on Card / Set data tomorrow
+
+### Day 5
+Had to go into work early today :( didnt have time to code.
