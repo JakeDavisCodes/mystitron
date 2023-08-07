@@ -17,3 +17,18 @@ Managed to finally connect local server to local db!
 Today I'd like to focus on getting some data into the db to start running tests and building the server routes. I'm going to use chat partly for this and I will have to make some myself.
 
 I wound up not being able to use Chat as much as I'd wanted to. I had to use a mixture of chat and JS to build some user data.
+
+### Day 3
+Today is going to be focused on Applications.
+
+### Day 4
+I had a great day at the Renaissance Fair today! Got an awesome digeridoo.
+No time for coding today, but I hope to start work on Card / Set data tomorrow
+
+### Day 5
+Had to go into work early today :( didnt have time to code.
+
+### Day 6
+I dont have a ton of time this morning to get work in, but I will put an hour or so into making some custom cards and sets.
+
+I developed three card collections today, and unfortunatly that's all I have time for today.
