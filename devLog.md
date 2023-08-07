@@ -30,3 +30,5 @@ Had to go into work early today :( didnt have time to code.
 
 ### Day 6
 I dont have a ton of time this morning to get work in, but I will put an hour or so into making some custom cards and sets.
+
+I developed three card collections today, and unfortunatly that's all I have time for today.
