@@ -27,3 +27,6 @@ No time for coding today, but I hope to start work on Card / Set data tomorrow
 
 ### Day 5
 Had to go into work early today :( didnt have time to code.
+
+### Day 6
+I dont have a ton of time this morning to get work in, but I will put an hour or so into making some custom cards and sets.
