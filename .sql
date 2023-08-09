@@ -20,6 +20,14 @@ CREATE TABLE IF NOT EXISTS collections(
   primary key(id)
 );
 
+CREATE TABLE IF NOT EXISTS packs(
+  id int auto_increment not null,
+  owner_id int not null,
+
+  primary key(id),
+  foreign key(owner_id) references users(id)
+);
+
 CREATE TABLE IF NOT EXISTS cards(
   id int auto_increment not null,
   display_name varchar(100) not null,
@@ -28,10 +36,12 @@ CREATE TABLE IF NOT EXISTS cards(
   owner_id int,
   collection_id int,
   image_path varchar(255),
+  pack_id int,
 
   primary key(id),
   foreign key(owner_id) references users(id),
-  foreign key(collection_id) references collections(id)
+  foreign key(collection_id) references collections(id),
+  foreign key(pack_id) references packs(id)
 );
 
 CREATE TABLE IF NOT EXISTS trades(

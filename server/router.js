@@ -11,4 +11,7 @@ router.get('/access', (req, res) => {
 router.get('/test', controller.test)
 router.get('/admin/generate_users', controller.admin.generateUsers)
 
+// User Routes
+router.get('/:user_id')
+
 module.exports = router;
