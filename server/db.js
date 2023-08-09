@@ -20,8 +20,8 @@ const dbFuncs = {
           .then((rows) => rows[0]),
      pack: {
           check: {
-               time: (id) => conn.query(`SELECT last_pack FROM users WHERE id = '${id}'`)
-               oldPack: (id) => conn.query(`SELECT * FROM packs WHERE us`),
+               time: (id) => conn.query(`SELECT last_pack FROM users WHERE id = '${id}'`),
+               oldPack: (id) => conn.query(`SELECT * FROM packs WHERE owner_id = '${id}'`),
           },
      },
      admin: {

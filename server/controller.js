@@ -1,6 +1,8 @@
 const db = require('./db.js')
 const generateFakeUsers = require('./fakeData/user.js').fakeUsers
 
+const toTimestamp = (strDate) => Date.parse(strDate) / 1000;
+
 const controllerFuncs = {
   test: (req, res) => {
     db.test()
@@ -10,20 +12,22 @@ const controllerFuncs = {
   user: {
     generatePack: (req, res) => {
       const id = req.params.user_id;
-      const currentTime = new Date().getTime();
+      const currentTime = new Date().getTime() / 1000;
 
       if (!id) res.status(400).json({ERROR:'USERNAME'});
 
       db.pack.check.time(id)
         .then((result) => {
-          const last_pack = result[0].last_pack
+          const last_pack = toTimestamp(result[0].last_pack);
+          console.log(last_pack + 86400 - currentTime)
 
-          if (last_pack === null || last_pack + 86400000 < currentTime) return;
-          else res.send(405).json({ ERROR: 'WAIT' });
+          if (last_pack === null || last_pack + 86400 < currentTime) return;
+          else res.status(405).json({ ERROR: 'WAIT' });
         })
         .then(() => db.pack.check.oldPack(id))
         .then((result) => {
-
+          if (result.length === 0) return;
+          else res.status(405).json({ ERROR: 'OLD_PACK' });
         })
         .catch((err) => {
           console.log(err)
