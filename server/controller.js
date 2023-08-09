@@ -17,21 +17,25 @@ const controllerFuncs = {
       if (!id) res.status(400).json({ERROR:'USERNAME'});
 
       db.pack.check.time(id)
+        // CHECKING FOR TIME
         .then((result) => {
           const last_pack = toTimestamp(result[0].last_pack);
           console.log(last_pack + 86400 - currentTime)
 
           if (last_pack === null || last_pack + 86400 < currentTime) return;
-          else res.status(405).json({ ERROR: 'WAIT' });
+          throw new Error('Wait')
         })
+
+        // CHECKING FOR OLD PACKS
         .then(() => db.pack.check.oldPack(id))
         .then((result) => {
           if (result.length === 0) return;
-          else res.status(405).json({ ERROR: 'OLD_PACK' });
+          throw new Error('Old Pack')
         })
+
         .catch((err) => {
-          console.log(err)
-          res.sendStatus(500)
+          if (err.message === 'Wait' || err.message === 'Old Pack') res.status(401).json({Unauthorized: err.message})
+          else res.status(500).json(err)
         })
 
       // Check if user can create pack

@@ -23,6 +23,7 @@ const dbFuncs = {
                time: (id) => conn.query(`SELECT last_pack FROM users WHERE id = '${id}'`),
                oldPack: (id) => conn.query(`SELECT * FROM packs WHERE owner_id = '${id}'`),
           },
+
      },
      admin: {
           createUser: (username, email, pass_hash) => conn.query(`INSERT INTO users (username, email, pass_hash) VALUES ('${username}', '${email}', '${pass_hash}')`)
