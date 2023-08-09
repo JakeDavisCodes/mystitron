@@ -35,3 +35,7 @@ I developed three card collections today, and unfortunatly that's all I have tim
 
 ### Day 7
 Today will be primarily focused on Applications.
+
+### Day 8
+Another Wednesday! I should have time for more work today. I want to start generating card packs today as well as the other routes. I'm going to need to make a change to the users table inorder to do this though.
+I need to track when the user last created a card pack. I want to make sure that users cannot create additional card packs or cheat the system so I will hold this functionality on the backend.
