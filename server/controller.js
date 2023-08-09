@@ -7,6 +7,37 @@ const controllerFuncs = {
       .then((result) => res.status(200).json(result))
       .catch((err) => res.sendStatus(500))
   },
+  user: {
+    generatePack: (req, res) => {
+      const id = req.params.user_id;
+      const currentTime = new Date().getTime();
+
+      if (!id) res.status(400).json({ERROR:'USERNAME'});
+
+      db.pack.check.time(id)
+        .then((result) => {
+          const last_pack = result[0].last_pack
+
+          if (last_pack === null || last_pack + 86400000 < currentTime) return;
+          else res.send(405).json({ ERROR: 'WAIT' });
+        })
+        .then(() => db.pack.check.oldPack(id))
+        .then((result) => {
+
+        })
+        .catch((err) => {
+          console.log(err)
+          res.sendStatus(500)
+        })
+
+      // Check if user can create pack
+        // If it has been long enough
+        // If they have pack remaining
+
+      // Create pack
+        // Pick and Mark cards
+    },
+  },
   admin: {
     generateUsers: (req, res) => {
       var userPormises = [];

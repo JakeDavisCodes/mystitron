@@ -18,6 +18,12 @@ pool.getConnection()
 const dbFuncs = {
      test: () => conn.query('SELECT * FROM USERS')
           .then((rows) => rows[0]),
+     pack: {
+          check: {
+               time: (id) => conn.query(`SELECT last_pack FROM users WHERE id = '${id}'`)
+               oldPack: (id) => conn.query(`SELECT * FROM packs WHERE us`),
+          },
+     },
      admin: {
           createUser: (username, email, pass_hash) => conn.query(`INSERT INTO users (username, email, pass_hash) VALUES ('${username}', '${email}', '${pass_hash}')`)
                .then(() => 'good')
