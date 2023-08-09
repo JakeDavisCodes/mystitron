@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS users(
   email varchar(255) not null,
   pass_hash varchar(255) not null,
   created_at timestamp default current_timestamp,
+  last_pack timestamp default 0,
 
   primary key(id)
 );
