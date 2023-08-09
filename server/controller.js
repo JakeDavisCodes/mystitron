@@ -2,6 +2,19 @@ const db = require('./db.js')
 const generateFakeUsers = require('./fakeData/user.js').fakeUsers
 
 const toTimestamp = (strDate) => Date.parse(strDate) / 1000;
+const toDate = (timestamp) => {
+  var date = '';
+  const dateFormat = new Date(timestamp);
+
+  date += (dateFormat.getFullYear() + '-');
+  date += ((dateFormat.getMonth() + 1) + '-'); // Adding 1 to month since it's zero-based
+  date += (dateFormat.getDate() + ' '); // Use getDate() instead of getDay() for day of the month
+  date += (dateFormat.getHours() + ':');
+  date += (dateFormat.getMinutes() + ':');
+  date += dateFormat.getSeconds();
+
+  return date;
+};
 
 const controllerFuncs = {
   test: (req, res) => {
@@ -20,7 +33,6 @@ const controllerFuncs = {
         // CHECKING FOR TIME
         .then((result) => {
           const last_pack = toTimestamp(result[0].last_pack);
-          console.log(last_pack + 86400 - currentTime)
 
           if (last_pack === null || last_pack + 86400 < currentTime) return;
           throw new Error('Wait')
@@ -34,11 +46,8 @@ const controllerFuncs = {
         })
 
         // CREATING PACK
-        .then(() => db.pack.create(id))
-        .then((results) => {
-          console.log(results)
-          res.sendStatus(201)
-        })
+        .then(() => db.pack.create(id, toDate(currentTime * 1000)))
+        .then((results) => res.sendStatus(201))
 
         .catch((err) => {
           if (err.message === 'Wait' || err.message === 'Old Pack') res.status(401).json({Unauthorized: err.message})

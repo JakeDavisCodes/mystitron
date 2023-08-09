@@ -23,7 +23,7 @@ const dbFuncs = {
                time: (id) => conn.query(`SELECT last_pack FROM users WHERE id = '${id}'`),
                oldPack: (id) => conn.query(`SELECT * FROM packs WHERE owner_id = '${id}'`),
           },
-          create: (id) => {
+          create: (id, currentTime) => {
                var pack_id = -1;
 
                conn.query(`INSERT INTO packs (owner_id) VALUES (${id})`)
@@ -49,6 +49,9 @@ const dbFuncs = {
 
                     return Promise.all(promises);
                })
+               .then(() => conn.query(`UPDATE users
+                                       SET last_pack = '${currentTime}'
+                                       WHERE id = ${id}`))
           }
      },
      admin: {
