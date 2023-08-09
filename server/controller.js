@@ -33,17 +33,17 @@ const controllerFuncs = {
           throw new Error('Old Pack')
         })
 
+        // CREATING PACK
+        .then(() => db.pack.create(id))
+        .then((results) => {
+          console.log(results)
+          res.sendStatus(201)
+        })
+
         .catch((err) => {
           if (err.message === 'Wait' || err.message === 'Old Pack') res.status(401).json({Unauthorized: err.message})
           else res.status(500).json(err)
         })
-
-      // Check if user can create pack
-        // If it has been long enough
-        // If they have pack remaining
-
-      // Create pack
-        // Pick and Mark cards
     },
   },
   admin: {
