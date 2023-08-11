@@ -46,3 +46,6 @@ I think I'll use the later option to maintain the many cards to one pack relatio
 
 ### Day 9
 I fully got the getPack feature working yesterday, but Had an early shift this morning and wasnt able to work today.
+
+### Day 10
+I had chores to do around the house, gym day, and a long work night so I won't be able to code today.
