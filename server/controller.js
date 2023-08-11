@@ -27,12 +27,12 @@ const controllerFuncs = {
       const id = req.params.user_id;
       const currentTime = new Date().getTime() / 1000;
 
-      if (!id) res.status(400).json({ERROR:'USERNAME'});
+      if (!id) throw new Error('Username');
 
       db.pack.check.time(id)
         // CHECKING FOR TIME
         .then((result) => {
-          const last_pack = toTimestamp(result[0].last_pack);
+          const last_pack = toTimestamp(result[0].last_pack) || 0;
 
           if (last_pack === null || last_pack + 86400 < currentTime) return;
           throw new Error('Wait')

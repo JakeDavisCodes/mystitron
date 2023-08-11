@@ -43,3 +43,6 @@ I need to track when the user last created a card pack. I want to make sure that
 I'm now tinking it would be best to store the pack on the backend to ensure that users can only take cards that are in a pack they generated. They would be offered these cards and then the pack would be deleted.
 It might also need a new collumn in the cards table, a boolean called ```packed```. If a card is packed, it cannot be put into another pack. Alternatively it could be a ```pack``` collumn that refferences a pack.
 I think I'll use the later option to maintain the many cards to one pack relationship.
+
+### Day 9
+I fully got the getPack feature working yesterday, but Had an early shift this morning and wasnt able to work today.
