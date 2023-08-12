@@ -49,3 +49,6 @@ I fully got the getPack feature working yesterday, but Had an early shift this m
 
 ### Day 10
 I had chores to do around the house, gym day, and a long work night so I won't be able to code today.
+
+### Day 11
+I have some extra time this morning to get in some work, I'm going to get in some of the basic routes including Signin / SignUp.
