@@ -25,12 +25,13 @@ const dbFuncs = {
           },
           create: (id, currentTime) => {
                var pack_id = -1;
+               var pack;
 
-               conn.query(`INSERT INTO packs (owner_id) VALUES (${id})`)
+               return conn.query(`INSERT INTO packs (owner_id) VALUES (${id})`)
                .then((result) => {
                     pack_id = result.insertId;
 
-                    return conn.query(`SELECT id FROM cards
+                    return conn.query(`SELECT * FROM cards
                                        WHERE owner_id IS NULL
                                        AND pack_id IS NULL
                                        ORDER BY RAND()
@@ -38,6 +39,7 @@ const dbFuncs = {
                })
                .then((cards) => {
                     const promises = [];
+                    pack = cards;
 
                     for (const card of cards) {
                          promises.push(
@@ -52,7 +54,18 @@ const dbFuncs = {
                .then(() => conn.query(`UPDATE users
                                        SET last_pack = '${currentTime}'
                                        WHERE id = ${id}`))
+               .then(() => {
+                    console.log('step 1', pack)
+                    return pack
+               })
+               .catch((err) => console.error(err))
           }
+     },
+     user: {
+          check: (username, email) => conn.query(`SELECT * FROM users WHERE username = '${username}' OR email = '${email}'`)
+               .then((results) => results.length === 0 ? true : false),
+
+          create: (username, email, pass_hash) => conn.query(`INSERT INTO users (username, email, pass_hash) VALUES ('${username}', '${email}', '${pass_hash}')`)
      },
      admin: {
           createUser: (username, email, pass_hash) => conn.query(`INSERT INTO users (username, email, pass_hash) VALUES ('${username}', '${email}', '${pass_hash}')`)

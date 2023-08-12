@@ -23,31 +23,48 @@ const controllerFuncs = {
       .catch((err) => res.sendStatus(500))
   },
   user: {
+    sign: {
+      up: (req, res) => {
+        const { username, email, pass_hash } = req.body
+
+        db.user.check(username, email)
+          .then((good) => {
+            if(good) return db.user.create(username, email, pass_hash)
+            else throw new Error('Email or Username already exists')
+          })
+          .then(() => res.sendStatus(201))
+          .catch((err) => {
+            console.error(err)
+
+            if (err.message === 'Email or Username already exists') res.status(401).json({Unauthorized: err.message})
+            else res.status(500).json(err)
+          })
+      },
+      in: (req, res) => null,
+    },
     generatePack: (req, res) => {
       const id = req.params.user_id;
       const currentTime = new Date().getTime() / 1000;
 
-      if (!id) throw new Error('Username');
+      if (!id)  res.status(401).json({Unauthorized: 'ID required'})
 
       db.pack.check.time(id)
-        // CHECKING FOR TIME
         .then((result) => {
           const last_pack = toTimestamp(result[0].last_pack) || 0;
 
           if (last_pack === null || last_pack + 86400 < currentTime) return;
           throw new Error('Wait')
         })
-
-        // CHECKING FOR OLD PACKS
         .then(() => db.pack.check.oldPack(id))
         .then((result) => {
           if (result.length === 0) return;
           throw new Error('Old Pack')
         })
-
-        // CREATING PACK
         .then(() => db.pack.create(id, toDate(currentTime * 1000)))
-        .then((results) => res.sendStatus(201))
+        .then((result) => {
+          console.log('step 2', result);
+          res.status(201).json(result)
+        })
 
         .catch((err) => {
           if (err.message === 'Wait' || err.message === 'Old Pack') res.status(401).json({Unauthorized: err.message})
