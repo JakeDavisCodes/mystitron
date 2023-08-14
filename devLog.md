@@ -55,3 +55,6 @@ I have some extra time this morning to get in some work, I'm going to get in som
 
 ### Day 12
 I wasnt able to code today but made some more applications.
+
+### Day 13
+Another early shift at work today, Im going to be making some applications this morning.
