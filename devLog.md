@@ -52,3 +52,6 @@ I had chores to do around the house, gym day, and a long work night so I won't b
 
 ### Day 11
 I have some extra time this morning to get in some work, I'm going to get in some of the basic routes including Signin / SignUp.
+
+### Day 12
+I wasnt able to code today but made some more applications.
