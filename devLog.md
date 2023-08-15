@@ -58,3 +58,6 @@ I wasnt able to code today but made some more applications.
 
 ### Day 13
 Another early shift at work today, Im going to be making some applications this morning.
+
+### Day 14
+Ive got a lot going on today! Gonna take a break and game some. Then I have some appointments and a code meet up!
