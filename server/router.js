@@ -13,6 +13,7 @@ router.get('/admin/generate_users', controller.admin.generateUsers)
 
 // User Routes
 router.post('/signUp', controller.user.sign.up)
+router.post('/signIn', controller.user.sign.in)
 router.post('/:user_id/generatePack', controller.user.generatePack)
 
 module.exports = router;

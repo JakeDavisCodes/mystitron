@@ -54,18 +54,28 @@ const dbFuncs = {
                .then(() => conn.query(`UPDATE users
                                        SET last_pack = '${currentTime}'
                                        WHERE id = ${id}`))
-               .then(() => {
-                    console.log('step 1', pack)
-                    return pack
-               })
-               .catch((err) => console.error(err))
+               .then(() => pack)
           }
      },
      user: {
           check: (username, email) => conn.query(`SELECT * FROM users WHERE username = '${username}' OR email = '${email}'`)
                .then((results) => results.length === 0 ? true : false),
 
-          create: (username, email, pass_hash) => conn.query(`INSERT INTO users (username, email, pass_hash) VALUES ('${username}', '${email}', '${pass_hash}')`)
+          create: (username, email, pass_hash) => conn.query(`INSERT INTO users (username, email, pass_hash) VALUES ('${username}', '${email}', '${pass_hash}')`),
+          signIn: (identifier, pass_hash) => conn.query(`SELECT * FROM users
+                                                         WHERE (username = '${identifier}' OR email = '${identifier}')
+                                                         AND pass_hash = '${pass_hash}'`)
+     },
+     session: {
+          get: (s_id) => {
+               conn.query(`SELECT * FROM sesh WHERE id = '${s_id}`)
+          },
+          create: (s_id, u_id) => {
+               conn.query(`INSERT INTO sesh (id, u_id) VALUES ('${s_id}', '${u_id}')`)
+          },
+          delete: (s_id, u_id) => {
+               conn.query(`DELETE FROM SESH WHERE u_id = '${u_id}' AND id != '${s_id}'`)
+          }
      },
      admin: {
           createUser: (username, email, pass_hash) => conn.query(`INSERT INTO users (username, email, pass_hash) VALUES ('${username}', '${email}', '${pass_hash}')`)

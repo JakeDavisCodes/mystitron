@@ -68,3 +68,11 @@ CREATE TABLE IF NOT EXISTS messages(
   foreign key(to_user_id) references users(id),
   foreign key(from_user_id) references users(id)
 );
+
+CREATE TABLE IF NOT EXISTS sesh(
+  id int not null,
+  u_id int not null,
+
+  primary key(id),
+  foreign key(u_id) references users(id)
+);

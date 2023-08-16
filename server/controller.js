@@ -40,7 +40,25 @@ const controllerFuncs = {
             else res.status(500).json(err)
           })
       },
-      in: (req, res) => null,
+      in: (req, res) => {
+        const { identifier, pass_hash } = req.body;
+        var s_id = Math.floor(Math.random() * 999999999);
+        var u_id
+
+        db.user.signIn(identifier, pass_hash)
+          .then((results) => {
+            u_id = results[0].id;
+
+            if (results.length > 0) return db.session.create(s_id, u_id)
+            else throw new Error('Incorrect Login')
+          })
+          .then(() => res.status(201).json({ s_id }))
+          .then(() => db.session.delete(s_id, u_id))
+          .catch((err) => {
+            if (err.message === 'Incorrect Login') res.status(401).json({ Unauthorized: err.message })
+            else res.status(500).json(err)
+          })
+      },
     },
     generatePack: (req, res) => {
       const id = req.params.user_id;
