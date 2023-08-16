@@ -27,7 +27,7 @@ const dbFuncs = {
                var pack_id = -1;
                var pack;
 
-               return conn.query(`INSERT INTO packs (owner_id) VALUES (${id})`)
+               return conn.query(`INSERT INTO packs (owner_id) VALUES ('${id}')`)
                .then((result) => {
                     pack_id = result.insertId;
 
@@ -53,7 +53,7 @@ const dbFuncs = {
                })
                .then(() => conn.query(`UPDATE users
                                        SET last_pack = '${currentTime}'
-                                       WHERE id = ${id}`))
+                                       WHERE id = '${id}'`))
                .then(() => pack)
           },
           get: (u_id) => conn.query(`SELECT id FROM packs WHERE owner_id = '${u_id}'`)
@@ -69,7 +69,7 @@ const dbFuncs = {
           create: (username, email, pass_hash) => conn.query(`INSERT INTO users (username, email, pass_hash) VALUES ('${username}', '${email}', '${pass_hash}')`),
           signIn: (identifier, pass_hash) => conn.query(`SELECT * FROM users
                                                          WHERE (username = '${identifier}' OR email = '${identifier}')
-                                                         AND pass_hash = '${pass_hash}'`)
+                                                         AND pass_hash = '${pass_hash}'`),
      },
      session: {
           get: (s_id) => {
@@ -86,7 +86,10 @@ const dbFuncs = {
           createUser: (username, email, pass_hash) => conn.query(`INSERT INTO users (username, email, pass_hash) VALUES ('${username}', '${email}', '${pass_hash}')`)
                .then(() => 'good')
                .catch(() => 'bad'),
-     }
+     },
+     cards: {
+          get: (u_id) => conn.query(`SELECT * FROM cards WHERE owner_id = '${u_id}'`)
+     },
 };
 
 module.exports =  dbFuncs;

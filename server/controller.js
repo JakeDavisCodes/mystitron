@@ -111,6 +111,16 @@ const controllerFuncs = {
           }
         })
     },
+    getCards: (req, res) => {
+      if (!req.params.user_id) {
+        res.status(401).json({Unauthorized: 'ID required'})
+        return;
+      }
+
+      db.cards.get(req.params.user_id)
+        .then((results) => res.status(200).json(results))
+        .catch((err) => res.status(500).json(err))
+    },
   },
   admin: {
     generateUsers: (req, res) => {
