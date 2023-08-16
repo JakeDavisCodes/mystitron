@@ -32,10 +32,10 @@
 - [x] Sql File
 - [x] Build DB
 - [ ] Build Routes
-  - [ ] Generate / Get 'Pack'
+  - [x] Generate / Get 'Pack'
   - [ ] Trade
-  - [ ] Login
-  - [ ] SignUp
+  - [x] Login
+  - [x] SignUp
   - [ ] GetCards
 - [ ] Optimize Routes
   - [ ] Generate / Get 'Pack'
@@ -45,8 +45,8 @@
   - [ ] GetCards
 - [ ] Create Data
   - [x] Users
-  - [ ] Cards
-  - [ ] Sets
+  - [x] Cards
+  - [x] Sets
 
 #### Non-Code
 - [ ]
