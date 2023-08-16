@@ -55,7 +55,12 @@ const dbFuncs = {
                                        SET last_pack = '${currentTime}'
                                        WHERE id = ${id}`))
                .then(() => pack)
-          }
+          },
+          get: (u_id) => conn.query(`SELECT id FROM packs WHERE owner_id = '${u_id}'`)
+               .then((results) => {
+                    if (results.length === 0) return;
+                    return conn.query(`SELECT * FROM CARDS WHERE pack_id = '${results[0].id}'`)
+               })
      },
      user: {
           check: (username, email) => conn.query(`SELECT * FROM users WHERE username = '${username}' OR email = '${email}'`)
