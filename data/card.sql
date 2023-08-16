@@ -1,3 +1,5 @@
+INSERT INTO collections (display_name, internal_name)
+  VALUES ('Eternal Obsession', 'kneeper');
 INSERT INTO cards (display_name, internal_name, rarity, collection_id)
 VALUES
   ('The Kneeper', 'theKneeper', 'ultra', 1),
@@ -21,6 +23,8 @@ VALUES
   ('Lost', 'lost', 'common', 1),
   ('Lost', 'lost', 'common', 1);
 
+INSERT INTO collections (display_name, internal_name)
+  VALUES ('Joy and Laughter', 'giggle');
 INSERT INTO cards (display_name, internal_name, rarity, collection_id)
 VALUES
   ('The Giggle', 'theGiggle', 'ultra', 2),
@@ -44,6 +48,8 @@ VALUES
   ('Forest Creatures', 'forestCreatures', 'common', 2),
   ('Forest Creatures', 'forestCreatures', 'common', 2);
 
+INSERT INTO collections (display_name, internal_name)
+  VALUES ('Celestial Wisdom', 'skepsi');
 INSERT INTO cards (display_name, internal_name, rarity, collection_id)
 VALUES
   ('Skepsi', 'ultraSkepsi', 'ultra', 3),
