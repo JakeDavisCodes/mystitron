@@ -64,3 +64,6 @@ Ive got a lot going on today! Gonna take a break and game some. Then I have some
 
 ### Day 15
 I'm back on the full wednesday shift so I've got no time to code today. But I did get a lot of code done at the meetup yesterday!
+
+### Day 16
+Spending the day doing car chores and with my girl :)
