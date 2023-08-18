@@ -67,3 +67,6 @@ I'm back on the full wednesday shift so I've got no time to code today. But I di
 
 ### Day 16
 Spending the day doing car chores and with my girl :)
+
+### Day 17
+Slept in today so I wont have time to code or apply, might bring my laptop in to work and try to do some apps while it's slow though
