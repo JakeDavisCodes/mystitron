@@ -73,3 +73,5 @@ Slept in today so I wont have time to code or apply, might bring my laptop in to
 
 ### Day 18
 Skipped the last two days to spend the weekend with family, currently applying to jobs at work.
+
+### Day 19
