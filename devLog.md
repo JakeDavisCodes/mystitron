@@ -76,3 +76,6 @@ Skipped the last two days to spend the weekend with family, currently applying t
 
 ### Day 19 / 20 / 21 / 22
 Spent these days making applications
+
+### Day 23
+Went out with the boys to airsoft today. Also started talking to a potential client about a website.
