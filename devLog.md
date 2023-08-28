@@ -79,3 +79,6 @@ Spent these days making applications
 
 ### Day 23
 Went out with the boys to airsoft today. Also started talking to a potential client about a website.
+
+### Day 24
+Long day of rest and work, singned up for denver startup week
