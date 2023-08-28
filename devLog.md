@@ -82,3 +82,7 @@ Went out with the boys to airsoft today. Also started talking to a potential cli
 
 ### Day 24
 Long day of rest and work, singned up for denver startup week
+
+### Day 25
+Another application day, did some research and discussion with client.
+Very likely this project may be put on pause.
