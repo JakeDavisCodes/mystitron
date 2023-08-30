@@ -88,4 +88,8 @@ Another application day, did some research and discussion with client.
 Very likely this project may be put on pause.
 
 ### Day 26
-No progress day spent with SO
+No progress, day spent with SO
+
+### Day 27
+At work right now. Going to do applications.
+Scheduled time to meet with client on firday.
