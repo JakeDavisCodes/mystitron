@@ -93,3 +93,6 @@ No progress, day spent with SO
 ### Day 27
 At work right now. Going to do applications.
 Scheduled time to meet with client on firday.
+
+### Day 28
+Officially putting this project on pause
