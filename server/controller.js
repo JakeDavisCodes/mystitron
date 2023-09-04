@@ -64,7 +64,10 @@ const controllerFuncs = {
       const id = req.params.user_id;
       const currentTime = new Date().getTime() / 1000;
 
-      if (!id)  res.status(401).json({Unauthorized: 'ID required'})
+      if (!id) {
+        res.status(401).json({Unauthorized: 'ID required'})
+        return;
+      }
 
       db.pack.check.time(id)
         .then((result) => {
@@ -88,6 +91,35 @@ const controllerFuncs = {
           if (err.message === 'Wait' || err.message === 'Old Pack') res.status(401).json({Unauthorized: err.message})
           else res.status(500).json(err)
         })
+    },
+    getPack: (req, res) => {
+      if (!req.params.user_id) {
+        res.status(401).json({Unauthorized: 'ID required'})
+        return;
+      }
+
+      db.pack.get(req.params.user_id)
+        .then((results) => {
+          if (!results) throw new Error('No Pack')
+          res.status(200).json(results)
+        })
+        .catch((err) => {
+          if (err.message === 'No Pack') res.status(401).json({Unauthorized: err.message})
+          else {
+            console.log(err)
+            res.status(500).json(err)
+          }
+        })
+    },
+    getCards: (req, res) => {
+      if (!req.params.user_id) {
+        res.status(401).json({Unauthorized: 'ID required'})
+        return;
+      }
+
+      db.cards.get(req.params.user_id)
+        .then((results) => res.status(200).json(results))
+        .catch((err) => res.status(500).json(err))
     },
   },
   admin: {

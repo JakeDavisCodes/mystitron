@@ -15,5 +15,7 @@ router.get('/admin/generate_users', controller.admin.generateUsers)
 router.post('/signUp', controller.user.sign.up)
 router.post('/signIn', controller.user.sign.in)
 router.post('/:user_id/generatePack', controller.user.generatePack)
+router.get('/:user_id/pack', controller.user.getPack)
+router.get('/:user_id/cards', controller.user.getCards)
 
 module.exports = router;

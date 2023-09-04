@@ -61,3 +61,38 @@ Another early shift at work today, Im going to be making some applications this 
 
 ### Day 14
 Ive got a lot going on today! Gonna take a break and game some. Then I have some appointments and a code meet up!
+
+### Day 15
+I'm back on the full wednesday shift so I've got no time to code today. But I did get a lot of code done at the meetup yesterday!
+
+### Day 16
+Spending the day doing car chores and with my girl :)
+
+### Day 17
+Slept in today so I wont have time to code or apply, might bring my laptop in to work and try to do some apps while it's slow though
+
+### Day 18
+Skipped the last two days to spend the weekend with family, currently applying to jobs at work.
+
+### Day 19 / 20 / 21 / 22
+Spent these days making applications
+
+### Day 23
+Went out with the boys to airsoft today. Also started talking to a potential client about a website.
+
+### Day 24
+Long day of rest and work, singned up for denver startup week
+
+### Day 25
+Another application day, did some research and discussion with client.
+Very likely this project may be put on pause.
+
+### Day 26
+No progress, day spent with SO
+
+### Day 27
+At work right now. Going to do applications.
+Scheduled time to meet with client on firday.
+
+### Day 28
+Officially putting this project on pause
